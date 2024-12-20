@@ -1,40 +1,26 @@
 <?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>A Hugo Site</title>
+    <title>Welcome you!</title>
     <link>http://localhost:1313/rixile.github.io/</link>
-    <description>Recent content on A Hugo Site</description>
+    <description>Recent content on Welcome you!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Fri, 20 Dec 2024 08:59:22 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 19 Dec 2024 17:07:05 +0900</lastBuildDate>
     
         <atom:link href="http://localhost:1313/rixile.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
-        <title>Second Post Hangul</title>
-        <link>http://localhost:1313/rixile.github.io/posts/second-post-hangul/</link>
-        <pubDate>Fri, 20 Dec 2024 08:59:22 +0900</pubDate>
+        <title>Test1</title>
+        <link>http://localhost:1313/rixile.github.io/post/test1/</link>
+        <pubDate>Thu, 19 Dec 2024 17:07:05 +0900</pubDate>
         
-        <guid>http://localhost:1313/rixile.github.io/posts/second-post-hangul/</guid>
-        <description>A Hugo Site http://localhost:1313/rixile.github.io/posts/second-post-hangul/ -&lt;p&gt;한글을 넣어보자&lt;/p&gt;
-- http://localhost:1313/rixile.github.io/posts/second-post-hangul/ - This is a customized copyright.</description>
-        </item>
-    
-    
-    
-        <item>
-        <title>My First Post</title>
-        <link>http://localhost:1313/rixile.github.io/posts/my-first-post/</link>
-        <pubDate>Wed, 18 Dec 2024 17:39:55 +0900</pubDate>
-        
-        <guid>http://localhost:1313/rixile.github.io/posts/my-first-post/</guid>
-        <description>A Hugo Site http://localhost:1313/rixile.github.io/posts/my-first-post/ -&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
-&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;
-- http://localhost:1313/rixile.github.io/posts/my-first-post/ - This is a customized copyright.</description>
+        <guid>http://localhost:1313/rixile.github.io/post/test1/</guid>
+        <description>Welcome you! http://localhost:1313/rixile.github.io/post/test1/ -&lt;h3 id=&#34;테스트용&#34;&gt;테스트용&lt;/h3&gt;
+&lt;p&gt;포스트 입니다.&lt;/p&gt;
+- http://localhost:1313/rixile.github.io/post/test1/ - </description>
         </item>
     
     
