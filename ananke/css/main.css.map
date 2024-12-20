@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/home/rixile/workspace/blog",
+	"sourceRoot": "/home/goldmoon/workspace/hugo-blog",
 	"sources": [
 		"ananke/css/main.css"
 	],
