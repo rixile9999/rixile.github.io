@@ -1,26 +1,53 @@
 <?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome you!</title>
-    <link>http://localhost:1313/rixile.github.io/</link>
-    <description>Recent content on Welcome you!</description>
+    <title>A Hugo Site</title>
+    <link>https://rixile9999.github.io/rixile.github.io/</link>
+    <description>Recent content on A Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Dec 2024 17:07:05 +0900</lastBuildDate>
+    <copyright>This is a customized copyright.</copyright>
+    <lastBuildDate>Mon, 23 Dec 2024 17:39:55 +0900</lastBuildDate>
     
-        <atom:link href="http://localhost:1313/rixile.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://rixile9999.github.io/rixile.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>WSL(2)에 cuda toolkit 설치하기</title>
+        <link>https://rixile9999.github.io/rixile.github.io/posts/install-cudatoolkit-on-wsl2/</link>
+        <pubDate>Mon, 23 Dec 2024 17:39:55 +0900</pubDate>
+        
+        <guid>https://rixile9999.github.io/rixile.github.io/posts/install-cudatoolkit-on-wsl2/</guid>
+        <description>A Hugo Site https://rixile9999.github.io/rixile.github.io/posts/install-cudatoolkit-on-wsl2/ -&lt;h2 id=&#34;wsl2에-cuda-toolkit-설치하기&#34;&gt;WSL(2)에 cuda toolkit 설치하기&lt;/h2&gt;
+&lt;p&gt;nvidia 웹사이트에 매번 로그인 하는게 귀찮은 사람들을 위하여
+nvidia 홈페이지에 쓰여있는 명령어 가이드라인을 여기에 공유해본다. 2024년 12월 23일 기준이고, 시간이 지남에 따라 cuda version 관련 숫자 - 12.6.3, 12.6.3-1, 12-6 -을 업데이트 해야할 것이다.
+혹시나 헷갈려할 사람들을 위해 조금만 더 설명하자면 원 페이지 내용중 apt-get의 경우 구버전 우분투 명령어이기에 임의로 그냥 apt로 수정하였다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wget https://developer.download.nvidia.com/compute/cuda/12.6.3/local_installers/cuda-repo-wsl-ubuntu-12-6-local_12.6.3-1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dpkg -i cuda-repo-wsl-ubuntu-12-6-local_12.6.3-1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo cp /var/cuda-repo-wsl-ubuntu-12-6-local/cuda-*-keyring.gpg /usr/share/keyrings/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt -y install cuda-toolkit-12-6
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;PATH, LD_LIBRARY_PATH 환경변수값에 cuda 경로를 추가한다. 원문에는 cuda-12.6 경로를 추가하라고 써있으나 &lt;code&gt;/usr/local/cuda/bin&lt;/code&gt; 의 심볼릭 링크를 경로에 추가하는것이 더 범용성에서 더 유리하므로 경로를 수정하였다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;PATH&lt;/span&gt;=/usr/local/cuda/bin&lt;span style=&#34;color:#cd5555&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#00688b&#34;&gt;PATH&lt;/span&gt;:+:&lt;span style=&#34;color:#cd5555&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#00688b&#34;&gt;PATH&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#00688b&#34;&gt;LD_LIBRARY_PATH&lt;/span&gt;=/usr/local/cuda/lib64&lt;span style=&#34;color:#cd5555&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#00688b&#34;&gt;LD_LIBRARY_PATH&lt;/span&gt;:+:&lt;span style=&#34;color:#cd5555&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#00688b&#34;&gt;LD_LIBRARY_PATH&lt;/span&gt;&lt;span style=&#34;color:#cd5555&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;nvcc --version&lt;/code&gt;이 잘 출력된다면 설치완료.&lt;/p&gt;
+- https://rixile9999.github.io/rixile.github.io/posts/install-cudatoolkit-on-wsl2/ - This is a customized copyright.</description>
+        </item>
     
     
     
         <item>
         <title>Test1</title>
-        <link>http://localhost:1313/rixile.github.io/post/test1/</link>
+        <link>https://rixile9999.github.io/rixile.github.io/post/test1/</link>
         <pubDate>Thu, 19 Dec 2024 17:07:05 +0900</pubDate>
         
-        <guid>http://localhost:1313/rixile.github.io/post/test1/</guid>
-        <description>Welcome you! http://localhost:1313/rixile.github.io/post/test1/ -&lt;h3 id=&#34;테스트용&#34;&gt;테스트용&lt;/h3&gt;
+        <guid>https://rixile9999.github.io/rixile.github.io/post/test1/</guid>
+        <description>A Hugo Site https://rixile9999.github.io/rixile.github.io/post/test1/ -&lt;h3 id=&#34;테스트용&#34;&gt;테스트용&lt;/h3&gt;
 &lt;p&gt;포스트 입니다.&lt;/p&gt;
-- http://localhost:1313/rixile.github.io/post/test1/ - </description>
+- https://rixile9999.github.io/rixile.github.io/post/test1/ - This is a customized copyright.</description>
         </item>
     
     

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-	<meta name="generator" content="Hugo 0.140.0"><script src="/rixile.github.io/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=rixile.github.io/livereload" data-no-instant defer></script>
-<title>Welcome you!</title>
+	<meta name="generator" content="Hugo 0.140.0">
+<title>A Hugo Site</title>
 
 
 
@@ -10,15 +10,30 @@
 
 <meta charset="utf-8">
 <meta name="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="">
+<meta name="google-site-verification" content="G-XXXXXXXXXX">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=5" name="viewport">
 <meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
+<meta name="description" content="My HomePage Description">
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
 
 
+<meta property="og:url" content="https://rixile9999.github.io/rixile.github.io/">
+  <meta property="og:site_name" content="A Hugo Site">
+  <meta property="og:title" content="A Hugo Site">
+  <meta property="og:description" content="My HomePage Description">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="A Hugo Site">
+  <meta name="twitter:description" content="My HomePage Description">
 
 
 
@@ -26,8 +41,31 @@
 
 
 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        }
+      </script>
 
 
+
+
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "abcdefghzd");
+</script>
 
 
 
@@ -73,6 +111,46 @@
             
             
             
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/rixile.github.io/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/rixile.github.io/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/rixile.github.io/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/rixile.github.io/index.xml">
+                    RSS Feed
+                </a>
+                
+            
             
         </div>
     </div>
@@ -88,8 +166,8 @@
                 menu
             </i>
         </button>
-        <a id="navTitle" class="navbar-brand" href="http://localhost:1313/rixile.github.io/">
-            Welcome you!
+        <a id="navTitle" class="navbar-brand" href="https://rixile9999.github.io/rixile.github.io/">
+            A Hugo Site
         </a>
         
         <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
@@ -102,8 +180,10 @@
 </nav>
 <div class="single-column-header-container" id="pageHead"
      v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="http://localhost:1313/rixile.github.io/">
-        <div class="single-column-header-title">Welcome you!</div>
+    <a href="https://rixile9999.github.io/rixile.github.io/">
+        <div class="single-column-header-title">A Hugo Site</div>
+        
+        <div class="single-column-header-subtitle">Themed by Diary.</div>
         
 
     </a>
@@ -114,6 +194,45 @@
 
     <div class="post-list-container post-list-container-no-background">
         
+        
+            <a href="/rixile.github.io/posts/install-cudatoolkit-on-wsl2/" class="a-block">
+                <div class="post-item-wrapper">
+                    <div class="post-item post-item-no-divider">
+                        <div class="post-item-info-wrapper">
+                            <div class="post-item-title">
+                                WSL(2)에 cuda toolkit 설치하기
+                            </div>
+                            <div class="post-item-summary">
+                                
+                                    <h2 id="wsl2에-cuda-toolkit-설치하기">WSL(2)에 cuda toolkit 설치하기</h2>
+<p>nvidia 웹사이트에 매번 로그인 하는게 귀찮은 사람들을 위하여
+nvidia 홈페이지에 쓰여있는 명령어 가이드라인을 여기에 공유해본다. 2024년 12월 23일 기준이고, 시간이 지남에 따라 cuda version 관련 숫자 - 12.6.3, 12.6.3-1, 12-6 -을 업데이트 해야할 것이다.
+혹시나 헷갈려할 사람들을 위해 조금만 더 설명하자면 원 페이지 내용중 apt-get의 경우 구버전 우분투 명령어이기에 임의로 그냥 apt로 수정하였다.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
+</span></span><span style="display:flex;"><span>sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
+</span></span><span style="display:flex;"><span>wget https://developer.download.nvidia.com/compute/cuda/12.6.3/local_installers/cuda-repo-wsl-ubuntu-12-6-local_12.6.3-1_amd64.deb
+</span></span><span style="display:flex;"><span>sudo dpkg -i cuda-repo-wsl-ubuntu-12-6-local_12.6.3-1_amd64.deb
+</span></span><span style="display:flex;"><span>sudo cp /var/cuda-repo-wsl-ubuntu-12-6-local/cuda-*-keyring.gpg /usr/share/keyrings/
+</span></span><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt -y install cuda-toolkit-12-6
+</span></span></code></pre></div><p>PATH, LD_LIBRARY_PATH 환경변수값에 cuda 경로를 추가한다. 원문에는 cuda-12.6 경로를 추가하라고 써있으나 <code>/usr/local/cuda/bin</code> 의 심볼릭 링크를 경로에 추가하는것이 더 범용성에서 더 유리하므로 경로를 수정하였다.</p>
+                                
+                            </div>
+                            <div class="post-item-meta">
+    2024-12-23
+    &emsp;
+    
+    
+    
+    &emsp;
+    
+</div>
+
+                        </div>
+                        
+                        
+                    </div>
+                </div>
         
             <a href="/rixile.github.io/post/test1/" class="a-block">
                 <div class="post-item-wrapper">
@@ -151,16 +270,60 @@
                     </div>
             </div><div id="sideContainer" class="side-container">
     
-    <a class="a-block nav-head active" href="http://localhost:1313/rixile.github.io/">
+    <a class="a-block nav-head active" href="https://rixile9999.github.io/rixile.github.io/">
     
         <div class="nav-title">
-            Welcome you!
+            A Hugo Site
+        </div>
+        
+        <div class="nav-subtitle">
+            Themed by Diary.
         </div>
         
     </a>
 
     <div class="nav-link-list">
         
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/rixile.github.io/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/rixile.github.io/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/rixile.github.io/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/rixile.github.io/index.xml">
+                RSS Feed
+            </a>
+            
         
     </div>
 
@@ -175,7 +338,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2024 Welcome you!
+	This is a customized copyright.
 	
 
     </div>
@@ -217,7 +380,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2024 Welcome you!
+	This is a customized copyright.
 	
 </div>
             </div>
