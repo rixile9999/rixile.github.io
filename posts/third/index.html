@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<title>WSL(2)에 cuda toolkit 설치하기</title>
+<title>Third</title>
 
 
 
@@ -16,16 +16,16 @@
 
 
 
-<meta property="og:url" content="https://rixile9999.github.io/rixile.github.io/posts/install-cudatoolkit-on-wsl2/">
+<meta property="og:url" content="https://rixile9999.github.io/rixile.github.io/posts/third/">
   <meta property="og:site_name" content="A Hugo Site">
-  <meta property="og:title" content="WSL(2)에 cuda toolkit 설치하기">
-  <meta property="og:description" content="WSL(2)에 cuda toolkit 설치하기 nvidia 웹사이트에 매번 로그인 하는게 귀찮은 사람들을 위하여 nvidia 홈페이지에 쓰여있는 명령어 가이드라인을 여기에 공유해본다. 2024년 12월 23일 기준이고, 시간이 지남에 따라 cuda version 관련 숫자 - 12.6.3, 12.6.3-1, 12-6 -을 업데이트 해야할 것이다. 혹시나 헷갈려할 사람들을 위해 조금만 더 설명하자면 원 페이지 내용중 apt-get의 경우 구버전 우분투 명령어이기에 임의로 그냥 apt로 수정하였다.
-wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600 wget https://developer.download.nvidia.com/compute/cuda/12.6.3/local_installers/cuda-repo-wsl-ubuntu-12-6-local_12.6.3-1_amd64.deb sudo dpkg -i cuda-repo-wsl-ubuntu-12-6-local_12.6.3-1_amd64.deb sudo cp /var/cuda-repo-wsl-ubuntu-12-6-local/cuda-*-keyring.gpg /usr/share/keyrings/ sudo apt update sudo apt -y install cuda-toolkit-12-6 PATH, LD_LIBRARY_PATH 환경변수값에 cuda 경로를 추가한다. 원문에는 cuda-12.6 경로를 추가하라고 써있으나 /usr/local/cuda/bin 의 심볼릭 링크를 경로에 추가하는것이 더 범용성에서 더 유리하므로 경로를 수정하였다.">
+  <meta property="og:title" content="Third">
+  <meta property="og:description" content="간략한 근황 운동, 식단, 수면 현재의 나를 유지하는 알파이자 오메가. 요가와 수영을 하고 살고 있다. 식단은 빡시게 하지는 않지만 대체로 점심 &#43; 간식, 아주 간단한 저녁또는 생략의 루틴을 가져가고 있다. 수면은 되도록이면 11시쯤 되면 침대에 누우려고 하고 있다. 목표 기상시간은 5시 또는 6시인데 아직까지는 제대로 달성하지 못하고 있다.
+티벳불교 공황장애를 겪은 뒤로 마음가짐의 중요성을 알게 되었고 티벳불교에 대한 관심이 커졌다. 제따와나 선원이라는 곳이 있는데 다음주 수요일부터 나가서 공부하며 수행해 볼까 한다.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-12-23T17:39:55+09:00">
-    <meta property="article:modified_time" content="2024-12-23T17:39:55+09:00">
+    <meta property="article:published_time" content="2025-01-06T20:51:37+09:00">
+    <meta property="article:modified_time" content="2025-01-06T20:51:37+09:00">
 
 
 
@@ -33,9 +33,9 @@ wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="WSL(2)에 cuda toolkit 설치하기">
-  <meta name="twitter:description" content="WSL(2)에 cuda toolkit 설치하기 nvidia 웹사이트에 매번 로그인 하는게 귀찮은 사람들을 위하여 nvidia 홈페이지에 쓰여있는 명령어 가이드라인을 여기에 공유해본다. 2024년 12월 23일 기준이고, 시간이 지남에 따라 cuda version 관련 숫자 - 12.6.3, 12.6.3-1, 12-6 -을 업데이트 해야할 것이다. 혹시나 헷갈려할 사람들을 위해 조금만 더 설명하자면 원 페이지 내용중 apt-get의 경우 구버전 우분투 명령어이기에 임의로 그냥 apt로 수정하였다.
-wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600 wget https://developer.download.nvidia.com/compute/cuda/12.6.3/local_installers/cuda-repo-wsl-ubuntu-12-6-local_12.6.3-1_amd64.deb sudo dpkg -i cuda-repo-wsl-ubuntu-12-6-local_12.6.3-1_amd64.deb sudo cp /var/cuda-repo-wsl-ubuntu-12-6-local/cuda-*-keyring.gpg /usr/share/keyrings/ sudo apt update sudo apt -y install cuda-toolkit-12-6 PATH, LD_LIBRARY_PATH 환경변수값에 cuda 경로를 추가한다. 원문에는 cuda-12.6 경로를 추가하라고 써있으나 /usr/local/cuda/bin 의 심볼릭 링크를 경로에 추가하는것이 더 범용성에서 더 유리하므로 경로를 수정하였다.">
+  <meta name="twitter:title" content="Third">
+  <meta name="twitter:description" content="간략한 근황 운동, 식단, 수면 현재의 나를 유지하는 알파이자 오메가. 요가와 수영을 하고 살고 있다. 식단은 빡시게 하지는 않지만 대체로 점심 &#43; 간식, 아주 간단한 저녁또는 생략의 루틴을 가져가고 있다. 수면은 되도록이면 11시쯤 되면 침대에 누우려고 하고 있다. 목표 기상시간은 5시 또는 6시인데 아직까지는 제대로 달성하지 못하고 있다.
+티벳불교 공황장애를 겪은 뒤로 마음가짐의 중요성을 알게 되었고 티벳불교에 대한 관심이 커졌다. 제따와나 선원이라는 곳이 있는데 다음주 수요일부터 나가서 공부하며 수행해 볼까 한다.">
 
 
 
@@ -183,11 +183,19 @@ wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/
 									<ul>
 								
 							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
 						
 						
 							<li>
-								<a href="#wsl2%ec%97%90-cuda-toolkit-%ec%84%a4%ec%b9%98%ed%95%98%ea%b8%b0" class="nav-wsl2에-cuda-toolkit-설치하기">
-									WSL(2)에 cuda toolkit 설치하기
+								<a href="#%ea%b0%84%eb%9e%b5%ed%95%9c-%ea%b7%bc%ed%99%a9" class="nav-간략한-근황">
+									간략한 근황
 								</a>
 							</li>
 						
@@ -250,12 +258,12 @@ wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/
                 
             >
                 <div class="post-title">
-                    WSL(2)에 cuda toolkit 설치하기
+                    Third
                     
                     <div class="post-meta">
                         
                         <time itemprop="datePublished">
-                            2024-12-23 17:39
+                            2025-01-06 20:51
                         </time>
                         
 
@@ -271,25 +279,23 @@ wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/
                 
                 <div class="post-body" v-pre>
                 
-                    <h2 id="wsl2에-cuda-toolkit-설치하기">WSL(2)에 cuda toolkit 설치하기</h2>
-<p>nvidia 웹사이트에 매번 로그인 하는게 귀찮은 사람들을 위하여
-nvidia 홈페이지에 쓰여있는 명령어 가이드라인을 여기에 공유해본다. 2024년 12월 23일 기준이고, 시간이 지남에 따라 cuda version 관련 숫자 - 12.6.3, 12.6.3-1, 12-6 -을 업데이트 해야할 것이다.
-혹시나 헷갈려할 사람들을 위해 조금만 더 설명하자면 원 페이지 내용중 apt-get의 경우 구버전 우분투 명령어이기에 임의로 그냥 apt로 수정하였다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
-</span></span><span style="display:flex;"><span>sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
-</span></span><span style="display:flex;"><span>wget https://developer.download.nvidia.com/compute/cuda/12.6.3/local_installers/cuda-repo-wsl-ubuntu-12-6-local_12.6.3-1_amd64.deb
-</span></span><span style="display:flex;"><span>sudo dpkg -i cuda-repo-wsl-ubuntu-12-6-local_12.6.3-1_amd64.deb
-</span></span><span style="display:flex;"><span>sudo cp /var/cuda-repo-wsl-ubuntu-12-6-local/cuda-*-keyring.gpg /usr/share/keyrings/
-</span></span><span style="display:flex;"><span>sudo apt update
-</span></span><span style="display:flex;"><span>sudo apt -y install cuda-toolkit-12-6
-</span></span></code></pre></div><p>PATH, LD_LIBRARY_PATH 환경변수값에 cuda 경로를 추가한다. 원문에는 cuda-12.6 경로를 추가하라고 써있으나 <code>/usr/local/cuda/bin</code> 의 심볼릭 링크를 경로에 추가하는것이 더 범용성에서 더 유리하므로 경로를 수정하였다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">export</span> <span style="color:#8be9fd;font-style:italic">PATH</span><span style="color:#ff79c6">=</span>/usr/local/cuda/bin<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">PATH</span>:+:<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">PATH</span><span style="color:#f1fa8c">}}</span>
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">export</span> <span style="color:#8be9fd;font-style:italic">LD_LIBRARY_PATH</span><span style="color:#ff79c6">=</span>/usr/local/cuda/lib64<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">LD_LIBRARY_PATH</span>:+:<span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">LD_LIBRARY_PATH</span><span style="color:#f1fa8c">}}</span>
-</span></span></code></pre></div><p><code>nvcc --version</code>이 잘 출력된다면 설치완료.</p>
+                    <h4 id="간략한-근황">간략한 근황</h4>
+<h5 id="운동-식단-수면">운동, 식단, 수면</h5>
+<p>현재의 나를 유지하는 알파이자 오메가. 요가와 수영을 하고 살고 있다. 식단은 빡시게 하지는 않지만 대체로 점심 + 간식, 아주 간단한 저녁또는 생략의 루틴을 가져가고 있다. 수면은 되도록이면 11시쯤 되면 침대에 누우려고 하고 있다. 목표 기상시간은 5시 또는 6시인데 아직까지는 제대로 달성하지 못하고 있다.</p>
+<h5 id="티벳불교">티벳불교</h5>
+<p>공황장애를 겪은 뒤로 마음가짐의 중요성을 알게 되었고 티벳불교에 대한 관심이 커졌다. 제따와나 선원이라는 곳이 있는데 다음주 수요일부터 나가서 공부하며 수행해 볼까 한다.</p>
+<h5 id="데이비드-고긴스">데이비드 고긴스</h5>
+<p>유튜브를 통하여 알게 된 사람이다. 자기 인생의 목표를 고통을 견디고 이겨내는 것이라 지정한 사람. 삶은 절대 행복하지 않으며 오히려 고통으로 가득 차 있는데 이러한 고통을 참고 견디는 자체가 의미있는 일이라 주장하는 이 전직 네이비씰 흑인의 주장이랄까 철학이 놀랍도록 불교와 닮아있는 점이 놀라웠고 마음에 울림을 주었다.</p>
+<h5 id="졸업준비중">졸업준비중</h5>
+<p>끝이 나지 않는 정부 과제 제안 및 보고서 작성의 굴레에 신물이 나는 중이다. 할 말이 많지만 평지풍파를 일으키지 않고 조용히 나가는게 본인에게 가장 효율적인 이득이란 판단아래 <!-- raw HTML omitted --> 이 세금낭비의 결정체 같은 곳을 탈출하기 위하여 졸업요건을 갖추기 위하여 발악을 하는 중이다. 악이란 평범 속에 스며든다고 누가 그랬던거 같은데 딱 그짝이다. 인간이란 간사하기가 이로 말할 수 없는 존재이다. 자기에게 오는 띠끌만한 위해까지도 받기 싫어하는 나머지 피부에 와닿는 일상속의 부조리에는 외면하거나 입을 다문 반면 뉴스 미디어 따위에서나 떠들어대는, 신기루와도 같은 대의를 위해서는 잘난 입을 나불나불 잘도 떠들어댄다. 위에계신 잘난 관료들은 이러한 대중의 속성을 잘 파악하고 있는 것으로 보인다. 그들에겐 오로지 개 돼지들에게 보여주기 위한 숫자 - 얼만큼의 예산을 R&amp;D에 태웠나 따위의 - 만이 중요하고 의미가 있으며 예산의 구체성, 구체적인 집행내역따위는 전혀 중요한 것이 아니다. 결국엔 자연도태될 빌어먹을 과학 카르텔이라고 생각하지만 언젠가 어떤 정의의 집행자가 나타나 빠르게 정화를 시켜주었으면 하는 망상적인 바람역시 가지고 있다.</p>
+<h5 id="competative-programming-갈고-닦는중">competative programming 갈고 닦는중</h5>
+<p>chatGPT에게 물어본 결과 나정도 실력이면 꾸준히 준비할 경우 반년안에 codeforce 레이팅 1700+ 도달이 가능하다는 말에 솔깃해서 가장 진지한 마음으로 알고리즘 코딩을 준비하고 있다. 그동안 인공지능 공부한답시고 코딩을 소홀히 했는데 오랜만에 빠릿빠릿한 코딩분야로 복귀를 하니 뭔지모를 빠이팅이 생겨나는 중이다.</p>
+<h5 id="ai-코딩중">AI 코딩중</h5>
+<p>얼마전까지 솔라나 프로그래밍에 꽃혀서 defi 투자 프로그램을 개발하고 살았다. Defi 서비스업체에서 샘플로 만들어둔 liquidity pool 자동 관리 프로그램을 실행시키는데 까지는 성공했는데 시간이 없다보니 이후의 개발은 중단되어 있는 상태이다.</p>
 
                     
                     <HR width="100%" id="EOF">
-		    <p style="color:#777;">Last modified on 2024-12-23</p>
+		    <p style="color:#777;">Last modified on 2025-01-06</p>
                     
                 </div>
             </div>
@@ -298,14 +304,14 @@ nvidia 홈페이지에 쓰여있는 명령어 가이드라인을 여기에 공�
             <nav class="post-pagination">
 
                 
-                <a class="newer-posts" href="/rixile.github.io/posts/third/">
-			Next<br>Third
+                <a class="newer-posts">
+			Next<br>No newer posts.
                 </a>
                 
                 
                 
-                <a class="older-posts" href="/rixile.github.io/post/test1/">
-			Previous<br>Test1
+                <a class="older-posts" href="/rixile.github.io/posts/install-cudatoolkit-on-wsl2/">
+			Previous<br>WSL(2)에 cuda toolkit 설치하기
                 </a>
                 
             </nav>
@@ -452,11 +458,19 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 									<ul>
 								
 							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
 						
 						
 							<li>
-								<a href="#wsl2%ec%97%90-cuda-toolkit-%ec%84%a4%ec%b9%98%ed%95%98%ea%b8%b0" class="nav-wsl2에-cuda-toolkit-설치하기">
-									WSL(2)에 cuda toolkit 설치하기
+								<a href="#%ea%b0%84%eb%9e%b5%ed%95%9c-%ea%b7%bc%ed%99%a9" class="nav-간략한-근황">
+									간략한 근황
 								</a>
 							</li>
 						

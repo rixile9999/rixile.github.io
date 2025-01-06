@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>This is a customized copyright.</copyright>
-    <lastBuildDate>Mon, 23 Dec 2024 17:39:55 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jan 2025 20:51:37 +0900</lastBuildDate>
     <atom:link href="https://rixile9999.github.io/rixile.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Third</title>
+      <link>https://rixile9999.github.io/rixile.github.io/posts/third/</link>
+      <pubDate>Mon, 06 Jan 2025 20:51:37 +0900</pubDate>
+      <guid>https://rixile9999.github.io/rixile.github.io/posts/third/</guid>
+      <description>&lt;h4 id=&#34;간략한-근황&#34;&gt;간략한 근황&lt;/h4&gt;&#xA;&lt;h5 id=&#34;운동-식단-수면&#34;&gt;운동, 식단, 수면&lt;/h5&gt;&#xA;&lt;p&gt;현재의 나를 유지하는 알파이자 오메가. 요가와 수영을 하고 살고 있다. 식단은 빡시게 하지는 않지만 대체로 점심 + 간식, 아주 간단한 저녁또는 생략의 루틴을 가져가고 있다. 수면은 되도록이면 11시쯤 되면 침대에 누우려고 하고 있다. 목표 기상시간은 5시 또는 6시인데 아직까지는 제대로 달성하지 못하고 있다.&lt;/p&gt;&#xA;&lt;h5 id=&#34;티벳불교&#34;&gt;티벳불교&lt;/h5&gt;&#xA;&lt;p&gt;공황장애를 겪은 뒤로 마음가짐의 중요성을 알게 되었고 티벳불교에 대한 관심이 커졌다. 제따와나 선원이라는 곳이 있는데 다음주 수요일부터 나가서 공부하며 수행해 볼까 한다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>WSL(2)에 cuda toolkit 설치하기</title>
       <link>https://rixile9999.github.io/rixile.github.io/posts/install-cudatoolkit-on-wsl2/</link>
